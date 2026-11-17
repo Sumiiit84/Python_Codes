@@ -14,11 +14,12 @@ class SLL:
         
         if(self.head == None):
             self.head = temp
+            # ****
             temp.next = self.head
             return
             
         t1 = self.head
-
+        # ****
         while(t1.next != self.head):
             t1 = t1.next
         t1.next = temp

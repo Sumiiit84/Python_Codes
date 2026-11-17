@@ -71,7 +71,7 @@ class SLL:
         curr = self.head
         prev = None
         while(curr):
-            nextnode = curr.next
+            nextnode = curr.next    
             curr.next = prev
             prev = curr
             curr = nextnode
@@ -118,17 +118,17 @@ class SLL:
     def del_alternate(self):
         prev = self.head
         temp = self.head.next
-        while(prev and temp):
+        while(prev != None and temp != None):
             prev.next = temp.next
             temp = None      #delete a node
             prev = prev.next
             temp = prev.next
-            if(prev):
+            if(prev != None):
                 temp = prev.next
                 
     def concatenate(self):
         temp = self.head
-        while(temp.next):
+        while(temp.next != None):
             temp = temp.next
         temp.next = obj1.head
         
@@ -147,17 +147,7 @@ obj.append(2)
 obj.append(3)
 obj.append(4)
 obj.append(5)
-obj1.append(1)
-obj1.append(2)
-obj1.append(3)
-obj1.append(4)
-obj1.append(5)
-print("First List :- ")
-obj.print()
-print('Second List :- ')
-obj1.print()
-print("Concatination :- " , '\n')
-obj.concatenate()
+obj.del_alternate()
 obj.print()
 
 
